@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEditor.Callbacks;
@@ -49,6 +50,12 @@ namespace MultiScene
 
         static void Open(MultiScene multiScene)
         {
+            bool cancelled = !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
+            if (cancelled)
+            {
+                return;
+            }
+
             EditorSceneManager.RestoreSceneManagerSetup(multiScene.ToSceneSetups());
         }
 

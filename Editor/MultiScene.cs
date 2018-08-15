@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 
-namespace MultiScene
+namespace MS
 {
     public class MultiScene : ScriptableObject
     {

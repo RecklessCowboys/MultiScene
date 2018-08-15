@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEditor.Callbacks;
 
-namespace MultiScene
+namespace MS
 {
     [CustomEditor(typeof(MultiScene))]
     public class ConfigurationEditor : Editor
